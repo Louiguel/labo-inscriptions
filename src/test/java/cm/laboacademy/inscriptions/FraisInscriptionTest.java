@@ -27,4 +27,9 @@ class FraisInscriptionTest {
         assertThrows(IllegalArgumentException.class,
                 () -> frais.calculer("X9", false));
     }
+
+    @Test
+    void master2NonBoursier() {
+        assertEquals(75000, frais.calculer("M2", false));
+    }
 }
